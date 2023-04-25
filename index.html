@@ -1,14 +1,310 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <meta charset='utf-8'>
-    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
-    <title>Page Title</title>
-    <meta name='viewport' content='width=device-width, initial-scale=1'>
-    <link rel='stylesheet' type='text/css' media='screen' href='main.css'>
-    <script src='main.js'></script>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RiNoticias</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@300&family=Work+Sans&display=swap');
+    </style>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="main.css">
 </head>
 <body>
-    <h3>hola</h3>
+    <div class="main-container">
+        <div class="menu">
+            <div class="menu-left">
+                <ul>
+                    <li>
+                        <a href="">INICIO</a>
+                    </li>
+                    <li>
+                        <a href="">NUESTRA FILOSOFÍA</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="logo">
+                <img src="img/logo.png" width="70%" alt="">
+            </div>
+            <div class="menu-right">
+                <ul>
+                    <li>
+                        <a href="">NOSOTROS</a>
+                    </li>
+                    <li>
+                        <a href="">CONTACTO</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="menu-mobile">
+            <div class="menu-open-close">
+                <div class="header">
+                    <a href="" class="logo"><img src="img/logo.png" width="64" alt=""></a>
+                    <a href="#" id="buttonOpenCloseMenu">
+                        <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 0 24 24" width="24px" fill="#000000"><path d="M0 0h24v24H0z" fill="none"/><path d="M3 18h18v-2H3v2zm0-5h18v-2H3v2zm0-7v2h18V6H3z"/></svg>
+                    </a>
+                </div>
+                <div id="menu-mobile-items" class="menu-mobile-closed">
+                    <ul >
+                        <li>
+                            <a href="">INICIO</a>
+                        </li>
+                        <li>
+                            <a href="">NUESTRA FILOSOFÍA</a>
+                        </li>
+                        <li>
+                            <a href="">NOSOTROS</a>
+                        </li>
+                        <li>
+                            <a href="">CONTACTO</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <!--MAIN SCREEN-->
+        <section class="main-video">
+            <div class="video">
+                <video controls autoplay muted><source src="video/video.mp4" autoplay loop></video>
+            </div>
+        </section>
+
+        <section class="intro">
+            <h2>RINOTICIAS <hr><br> TU NOTICIARIO DE COFIANZA</h2>
+            <p>
+                 SOMOS UN PORTAL DE NOTICIAS DE NUEVA CREACIÓN DISPUESTOS A INFORMARTE
+            </p>
+        </section>
+
+        
+        <!-- WORK -->
+        <section>
+            <h2>NUESTRA FILOSOFÍA</h2>
+            <div class=" grid work">
+                
+                <a href="#" class="item" data-id="0">
+                    <img src="img/portada-01.jpg" alt="" width="100%">
+                    <div class="bg-hover" data-id="0">
+                        <div class="info">
+                            <div class="customer">COMPAÑERISMO</div>
+                        </div>
+                    </div>
+                </a>
+                <a href="#" class="item" data-id="1">
+                    <img src="img/portada-02.jpg" alt="" width="100%">
+                    <div class="bg-hover">
+                        <div class="info">
+                            <div class="customer">ÉTICA DE TRABAJO</div>
+                        </div>
+                    </div>
+                </a>
+                <a href="#" class="item" data-id="2">
+                    <img src="img/portada-03.jpg" alt="" width="100%">
+                    <div class="bg-hover">
+                        <div class="info">
+                            <div class="customer">COMPROMISO</div>
+                        </div>
+                    </div>
+                </a>
+                <a href="#" class="item" >
+                    <img src="img/portada-04.jpg" alt="" width="100%">
+                    <div class="bg-hover">
+                        <div class="info">
+                            <div class="customer">TIEMPO DE RELAJACIÓN</div>
+                        </div>
+                    </div>
+                </a>
+                <a href="#" class="item" >
+                    <img src="img/portada-05.jpg" alt="" width="100%">
+                    <div class="bg-hover">
+                        <div class="info">
+                            <div class="customer">DIÁLOGO</div>
+                        </div>
+                    </div>
+                </a>
+                <a href="#" class="item" >
+                    <img src="img/portada-06.jpg" alt="" width="100%">
+                    <div class="bg-hover">
+                        <div class="info">
+                            <div class="customer">ESFUERZO</div>
+                        </div>
+                    </div>
+                </a>         
+            </div>
+        </section>
+        
+        
+        <!-- ABOUT-->
+        <section class="about">
+            <h2>NOSOTROS</h2>
+            <div class="columns">
+                <div>
+                    <h3>SOMOS</h3>
+                    <p>
+                        Tres periodistas con el objetivo de crear nuestra propia plataforma en la que poder escribir
+                    </p>
+                </div>
+                <div>
+                    <h3>IMPARCIALIDAD</h3>
+                    <p>
+                        Nuestro objetivo, trabajando todos los días para intentar conseguirla
+                    </p>
+                </div>
+                <div>
+                    <h3>ACTUALIDAD</h3>
+                    <p>
+                        No esperes a que te lo cuenten, nosotros informamos desde el minuto 0
+                    </p>
+                </div>
+            </div>
+        </section>
+        
+        <section>
+            <div class=" grid work">
+                <a href="#" class="item" data-id="0">
+                    <img src="img/gente2.jpg" alt="" width="100%">
+                    <div class="bg-hover" data-id="0">
+                        <div class="info">
+                            <div class="title">Rogelio Martínez</div>
+                            <div class="customer">Reportero de guerra</div>
+                        </div>
+                    </div>
+                </a>
+
+                <a href="#" class="item" data-id="0">
+                    <img src="img/gente1.jpg" alt="" width="100%">
+                    <div class="bg-hover" data-id="0">
+                        <div class="info">
+                            <div class="title">Eufrasio Torres</div>
+                            <div class="customer">Director</div>
+                        </div>
+                    </div>
+                </a>
+
+                <a href="#" class="item" data-id="0">
+                    <img src="img/gente3.jpg" alt="" width="100%">
+                    <div class="bg-hover" data-id="0">
+                        <div class="info">
+                            <div class="title">Enrique Pizarra</div>
+                            <div class="customer">Community Managerr</div>
+                        </div>
+                    </div>
+                </a>
+            </div>
+        </section>
+
+        <!-- CONTACT-->
+        <section class="contact">
+            
+            <div class="contact-container">
+                <h2>CONTACTO</h2>
+                
+                <div class="columns">
+                    <div class="location">
+                        <h3> 
+                        Telemáticamente
+                        <br>    </h3>
+                        contacto@rinoticias.nw <br>
+
+                        Teléfono: +34 654 65 56 34
+                    </div>
+
+                    <div class="social">
+                        <h3>SIGUENOS</h3>
+                        <a href="#">
+                           <img width="48px" height="48px" src="img/facebook.png">
+                        </a>
+                        <a href="#">
+                            <img width="48px" height="48px" src="img/instagram.png">
+                        </a>
+                        <a>
+                            <img width="48px" height="48px" src="img/twitter.png">
+                        </a>
+                    </div>
+
+                    <div class="emails">
+                        <h3>Físicamente</h3>
+                        Calle Albóndiga 3 3G,<br>
+                        Granada, 
+                    </div>
+                </div>
+            </div>
+
+        </section>
+        <div class="footer"></div>
+    </div>
+
+
+
+    <script>
+        const workItems = document.querySelectorAll('.work .item');
+        const workItemsCount = workItems.length;
+        let currentIndex = 0;
+        const closeButton = document.querySelector('#close-button');
+        const prevButton = document.querySelector('#prev-button');
+        const nextButton = document.querySelector('#next-button');
+        const openCloseButton = document.querySelector('#buttonOpenCloseMenu');
+        const menuMobileItems = document.querySelector('#menu-mobile-items');
+
+        openCloseButton.addEventListener('click', e =>{
+            menuMobileItems.classList.toggle('menu-mobile-closed')
+        })
+
+        workItems.forEach(item => {
+            item.addEventListener('click', e => {
+                e.preventDefault();
+                currentIndex = parseInt(item.getAttribute('data-id'));
+                const contentArr = document.querySelectorAll('#details-container .item');
+                
+                document.querySelectorAll('#details-container .item').forEach(item => { item.classList.add('item-hide');})
+                document.querySelectorAll('#details-container .item')[currentIndex].classList.toggle('item-hide');
+                document.querySelector('#screen').style['animation-name'] = 'fade-in';
+                document.querySelector('body').style['overflow'] = 'hidden';
+                setTimeout(() => {
+                    document.querySelector('#details-container').style.display = 'block';
+                }, 1000);
+                setTimeout(() => {
+                    document.querySelector('#screen').style = '';
+                }, 2000);
+            })
+        });
+
+
+        closeButton.addEventListener('click', e => {
+            e.preventDefault();
+            document.querySelector('#screen').style['animation-name'] = 'fade-in';
+            document.querySelector('body').style['overflow'] = 'auto';
+            setTimeout(() => {
+                document.querySelector('#details-container').style.display = 'none';
+            }, 1000);
+            setTimeout(() => {
+                document.querySelector('#screen').style = '';
+            }, 2000);
+        });
+
+        prevButton.addEventListener('click', e =>{
+            if(currentIndex - 1 < 0){
+                return;
+            }     
+            currentIndex--;
+            loadGalleryItem(currentIndex);
+        });
+        nextButton.addEventListener('click', e =>{
+            if(currentIndex + 1 == workItemsCount){
+                return;
+            }     
+            currentIndex++;
+            loadGalleryItem(currentIndex);
+        });
+
+        function loadGalleryItem(index){
+            document.querySelectorAll('#details-container .item').forEach(item => { item.classList.add('item-hide');})
+            document.querySelectorAll('#details-container .item')[index].classList.toggle('item-hide');     
+        }
+    </script>
 </body>
 </html>
