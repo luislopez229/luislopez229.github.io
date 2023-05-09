@@ -4,11 +4,35 @@
 }
 
 body{
-    background-color: black;
+    background-color: var(--fondo);
 }
 
+:root,
+    :root.light {
+    --fondo: rgb(192, 192, 192);
+    --fondo2: #454a97;
+    --color: white;
+    --imagen: url("./pattern.svg");
+    --color2: black;
+    --imagen2: url("./topography.svg");
+    --imagen3: url(fondoartl.svg);
+    }
+
+    :root.dark {
+        --fondo: #000000;
+        --fondo2: #f1b378;
+        --color: black;
+        --imagen: url("./cuadrados.svg");
+        --color2: white;
+        --imagen2: url("./topographyd.svg");
+        --imagen3: url(fondoart.svg);
+    }
+#otroDIV{
+    display: none;
+    color: white;
+}
 nav{
-    background-color: black;
+    background-color: var(--fondo);
     position: sticky;
     top: 0px;
     left: 0px;
@@ -39,9 +63,10 @@ header{
     margin:0% 5% 0 5%;
     padding: 2%;
     height: auto;
-    background-color: #f1b378;
+    background-color: var(--fondo2);
     background-image: repeating-linear-gradient(45deg, transparent, transparent 35px, rgba(255,255,255,.5) 35px, rgba(255,255,255,.5) 70px);
     z-index: 1;
+    color: var(--color);
 }
 
 div section{
@@ -49,9 +74,10 @@ div section{
     top: 0%;
     padding: 2%;
     margin: 0% 5% 0 5%;
-    background-color: #f1b378;  
+    background-color: var(--fondo2);  
     background-image: repeating-linear-gradient(135deg, transparent, transparent 35px, rgba(255,255,255,.5) 35px, rgba(255,255,255,.5) 70px);
     z-index: 2;
+    color: var(--color);
 }
 
 div section h3:first-of-type{
@@ -62,13 +88,14 @@ div section h3:first-of-type{
     top: 0%;
     padding: 5%;
     margin: 0% 5% 0 5%;
-    background-image: url(cuadrados.svg);
-    background-color: #000000;
+    background-image: var(--imagen);
+    background-position:left;
+    background-color: var(--fondo);
     z-index: 3;
-    color: rgb(66, 66, 66);
+    color: var(--color);
     font-size: 20px;
     font-weight:bolder;
-    text-shadow: 1px 1px #ffffff;
+    text-shadow: 1px 1px var(--color2);
 }
 
 .prueba2{
@@ -76,21 +103,23 @@ div section h3:first-of-type{
     top: 0%;
     padding: 5%;
     margin: 0% 5% 0px 5%;
-    background:
-      conic-gradient(from 75deg,#333   15deg ,#000000 0 30deg ,#0000 0 180deg, #000000 0 195deg,#333 0 210deg,#0000 0) calc(0.5*25px) calc(0.5*25px/0.577),
-      conic-gradient(#333   30deg ,#666 0 75deg, #333 0 90deg, #000000 0 105deg, #666 0 150deg, #000000 0 180deg,#666 0 210deg, #333 0 256deg, #000000 0 270deg,#333 0 286deg, #000000 0 331deg,#666 0);
-    background-size: 25px calc(25px/0.577);
-
-    color: white;
+    background-image: var(--imagen2);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    color: var(--color2);
     z-index: 4;
 }
 
 div article{
-    color: white;
-    background-color: black;
+    position: sticky;
+    top: 0%;
+    color: var(--color2);
+    background-color: var(--fondo);
     margin: 0% 5% 0px 5%;
     padding: 5%;
-    background-image: url(fondoart.svg);
+    background-image: var(--imagen3);
+    background-size:cover;
     background-position: bottom;
     background-repeat: no-repeat;
     z-index: 10;
