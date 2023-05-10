@@ -40,6 +40,22 @@ nav{
     height: 50px;
     color: grey;
 }
+
+select{
+    margin: 1%;
+    background-color: transparent;
+    color: var(--color2);
+}
+
+option{
+    background-color: var(--fondo);
+    color: var(--color2);
+}
+button{
+    padding: 1%;
+    background-color: var(--fondo2);
+    color: var(--fondo);
+}
 h6{
     text-align: right;
     padding: 1%;
