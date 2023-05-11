@@ -140,3 +140,8 @@ div article{
     background-repeat: no-repeat;
     z-index: 9;
 }
+
+#otroDIV img {
+    margin:0 4%;
+    padding: 2%;
+}
