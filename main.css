@@ -16,6 +16,7 @@ body{
     --color2: black;
     --imagen2: url("./topography.svg");
     --imagen3: url(fondoartl.svg);
+    --color3: black;
     }
 
     :root.dark {
@@ -26,11 +27,9 @@ body{
         --color2: white;
         --imagen2: url("./topographyd.svg");
         --imagen3: url(fondoart.svg);
+        --color3: rgb(192, 192, 192);
     }
-#otroDIV{
-    display: none;
-    color: white;
-}
+
 nav{
     background-color: var(--fondo);
     position: sticky;
@@ -41,6 +40,14 @@ nav{
     color: grey;
 }
 
+a{
+    color: var(--color);
+    padding: 1%;
+}
+
+a:visited{
+    color: var(--color);
+}
 select{
     margin: 1%;
     background-color: transparent;
@@ -58,13 +65,16 @@ button{
 }
 h6{
     text-align: right;
-    padding: 1%;
+    align-content:baseline;
 }
 p{
 
     padding: 10px;
 }
 
+.derecha{
+    text-align: right;
+}
 div{
     position: sticky;
     top: 0px;
@@ -74,24 +84,26 @@ div{
 }
 
 header{
+    font-size: 26px;
     position: sticky;
     top: 0%;
     margin:0% 5% 0 5%;
     padding: 2%;
     height: auto;
     background-color: var(--fondo2);
-    background-image: repeating-linear-gradient(45deg, transparent, transparent 35px, rgba(255,255,255,.5) 35px, rgba(255,255,255,.5) 70px);
+    background-image: repeating-linear-gradient(45deg, transparent, transparent 35px, rgba(255,255,255,.3) 35px, rgba(255,255,255,.3) 70px);
     z-index: 1;
     color: var(--color);
 }
 
 div section{
+    font-size: 26px;
     position: sticky;
     top: 0%;
     padding: 2%;
     margin: 0% 5% 0 5%;
     background-color: var(--fondo2);  
-    background-image: repeating-linear-gradient(135deg, transparent, transparent 35px, rgba(255,255,255,.5) 35px, rgba(255,255,255,.5) 70px);
+    background-image: repeating-linear-gradient(135deg, transparent, transparent 35px, rgba(255,255,255,.3) 35px, rgba(255,255,255,.3) 70px);
     z-index: 2;
     color: var(--color);
 }
@@ -99,7 +111,12 @@ div section{
 div section h3:first-of-type{
     text-align: right;
 }
+
+.derecha{
+    text-align: right;
+}
 .prueba{
+    font-size: 26px;
     position: sticky;
     top: 0%;
     padding: 5%;
@@ -108,13 +125,13 @@ div section h3:first-of-type{
     background-position:left;
     background-color: var(--fondo);
     z-index: 3;
-    color: var(--color);
-    font-size: 20px;
+    color: var(--color3);
     font-weight:bolder;
-    text-shadow: 1px 1px var(--color2);
+    text-shadow: 1px 1px var(--fondo);
 }
 
 .prueba2{
+    font-size: 26px;
     position: sticky;
     top: 0%;
     padding: 5%;
@@ -123,14 +140,16 @@ div section h3:first-of-type{
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
-    color: var(--color2);
+    color: var(--color3);
     z-index: 4;
+    text-shadow: 1px 1px var(--fondo);
+    font-weight:bolder;
 }
 
 div article{
+    font-size: 26px;
     position: sticky;
     top: 0%;
-    color: var(--color2);
     background-color: var(--fondo);
     margin: 0% 5% 0px 5%;
     padding: 5%;
@@ -139,9 +158,79 @@ div article{
     background-position: bottom;
     background-repeat: no-repeat;
     z-index: 9;
+    color: var(--color3);
+    text-shadow: 1px 1px 1px var(--fondo);
+    font-weight:bolder;
 }
 
 #otroDIV img {
     margin:0 4%;
     padding: 2%;
 }
+
+#otroDIV{
+    margin: 10% 25% 0 35%;
+    display: none;
+    grid-template-columns: repeat(5, 1fr);
+    grid-template-rows: repeat(5, 1fr);
+}
+
+#otroDIV p:first-of-type{
+    border-radius: 10%;
+    grid-area: 1 / 1 / 3 / 3;
+    width: 100%;
+    height: 100%;
+    background-color: var(--color3);
+}
+
+#otroDIV p:nth-child(2){
+    border-radius: 5% 0% 5% 0%;
+    padding: 5%;
+    grid-area: 2 / 2 / 4 / 4;
+    background-color: var(--fondo2);
+    color: var(--color);
+}
+
+#otroDIV p:nth-child(3){
+    border-radius: 10%;
+    grid-area: 3 / 3 / 5 / 5;
+    width: 100%;
+    height: 100%;
+    z-index: -10;
+    background-color: var(--fondo);
+    border: 1px solid var(--color3);
+}
+
+@media only screen and (max-width: 600px)  {
+
+    #otroDIV{
+        grid-template-columns: repeat(5, 1fr);
+        grid-template-rows: 0.2fr 1fr 0.2fr 0.2fr;
+    }
+
+    #otroDIV p:first-of-type{
+        border-radius: 0%;
+        grid-area: 1 / 1 / 2 / 5;
+        width: 100%;
+        height: 100%;
+        background-color: var(--color3);
+    }
+    
+    #otroDIV p:nth-child(2){
+        border-radius: 0%;
+        margin-left: 15%;
+        grid-area: 2 / 1 / 3 / 5;
+        background-color: var(--fondo2);
+        color: var(--color);
+    }
+    
+    #otroDIV p:nth-child(3){
+        border-radius: 0%;
+        grid-area: 3 / 1 / 4 / 5;
+        width: 100%;
+        height: 100%;
+        z-index: -10;
+        background-color: var(--fondo);
+        border: 1px solid var(--color3);
+    }
+}  
